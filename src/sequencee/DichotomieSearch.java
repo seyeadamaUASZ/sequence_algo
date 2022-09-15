@@ -7,6 +7,7 @@ package sequencee;
  * @author AdamaSEYE
  * la recheche dichotomique permet de faire une recherche
  * binaire depuis le mileu du tableau et dérouler progressivement
+ * dans les sens du tableau
  */
 public class DichotomieSearch {
 	public static void main(String[] args) {
