@@ -1,5 +1,12 @@
 package sequencee;
 
+/**
+ * 
+ * @author AdamaSEYE
+ * Modifier un message par rot13
+ * chaque caractère sera modifié soit déplacé de +13 ou de -13
+ *
+ */
 public class Rot13 {
 
 	public static void main(String[] args) {
