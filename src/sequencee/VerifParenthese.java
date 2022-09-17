@@ -1,5 +1,12 @@
 package sequencee;
 
+/**
+ * 
+ * @author AdamaSEYE
+ * Vérifier le nombre de parenthese gauche et droite
+ * parenthese ouvrante doit correspondre au parenthese fermante
+ *
+ */
 public class VerifParenthese {
 	
 	public static void main(String[] args) {

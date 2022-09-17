@@ -1,5 +1,14 @@
 package sequencee;
 
+/**
+ * 
+ * @author AdamaSEYE
+ * Vérifier les éléments similaires aux tableaux en prenant 
+ * en compte la suite des éléments 
+ * c'est à dire la suite des éléments sur le tableau 1 doit être de 
+ * meme sur l'autre tableau même si leur taille ne sont pas les memes
+ *
+ */
 public class Verification {
 
 	public static void main(String[] args) {
