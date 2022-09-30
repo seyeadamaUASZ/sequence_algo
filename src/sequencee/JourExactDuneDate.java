@@ -4,7 +4,7 @@ public class JourExactDuneDate {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-      jourExactDate("23/08/2022");
+      jourExactDate("29/09/2022");
 	}
 	
 	public static void jourExactDate(String date) {
