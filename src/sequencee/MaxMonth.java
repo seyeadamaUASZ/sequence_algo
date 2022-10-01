@@ -5,10 +5,10 @@ import java.util.List;
 
 /**
  * On essaie de trouver la plage où nous avons le plus
- * de nombre de grand nombres
+ * de nombre max
  * et donner les index de la plage
  * a chaque fois on recupere un max en ayant son index
- * tous les index seront sur un tableau donne
+ * tous les index seront sur une liste
  */
 
 public class MaxMonth {
