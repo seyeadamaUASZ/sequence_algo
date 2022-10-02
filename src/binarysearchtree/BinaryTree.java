@@ -53,6 +53,48 @@ public class BinaryTree {
 		}
 	}
 
+	// method affiche des elements d'un tableau de taille
+
+	static void printArr(int array[], int taille) {
+		for (int i = 0; i < taille; i++) {
+			System.out.println("sum level " + (i + 1) + " : " + array[i]);
+		}
+	}
+
+	// avoir la hauteur de l'arbre
+	static int getHeight(Node root) {
+		if (root.left == null && root.right == null) {
+			return 0;
+		} else {
+			int left = 0;
+			int right = 0;
+			if (root.left != null) {
+				left = getHeight(root.left);
+			}
+
+			if (root.right != null) {
+				right = getHeight(root.right);
+			}
+
+			return Math.max(left, right) + 1;
+
+		}
+	}
+
+	// methode de calcul de la somme des noeuds à chaque niveau
+
+	static void calculLevelSum(Node node, int level, int[] sum) {
+		if (node == null) {
+			return;
+		} else {
+			sum[level] += node.key;
+
+			calculLevelSum(node.left, level + 1, sum);
+			calculLevelSum(node.right, level + 1, sum);
+		}
+
+	}
+
 	public static void main(String[] args) {
 		BinaryTree tree = new BinaryTree();
 
@@ -77,21 +119,45 @@ public class BinaryTree {
 		 * 
 		 */
 		tree.root.left.left = new Node(4);
-		tree.root.right.right = new Node(5);
+		tree.root.left.right = new Node(5);
 
 		/*
 		 * 1
 		 * / \
 		 * 2 3
-		 * / \ / \
-		 * 4 5 null null
+		 * /\
+		 * 4 5 \ / \
+		 * null null null null
+		 * 
+		 */
+
+		// add other
+
+		tree.root.right.left = new Node(2);
+		tree.root.right.right = new Node(3);
+
+		/*
+		 * 1
 		 * / \
-		 * null null
+		 * 2 3
+		 * /\ /\
+		 * 4 5 2 3
+		 * null null null null
 		 * 
 		 */
 		System.out.println("binary tree");
 
 		tree.printNodes(tree.root, 1, 3);
+
+		// niveau
+		int levels = getHeight(tree.root) + 1;
+		System.out.println("level on root " + levels);
+		int sum[] = new int[levels];
+
+		calculLevelSum(tree.root, 0, sum);
+
+		// afficher le resultat de calcul sur le tableau
+		printArr(sum, levels);
 	}
 
 }
