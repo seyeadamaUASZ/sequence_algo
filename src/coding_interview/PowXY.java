@@ -3,7 +3,7 @@ package coding_interview;
 public class PowXY {
 
     public static void main(String[] args) {
-        System.out.println(myPow(4, -2));
+        System.out.println(myPow(4, 2));
 
     }
 
